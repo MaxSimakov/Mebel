@@ -94,9 +94,10 @@ $(window).load(function () {
             //freeMode: true,
             centeredSlides: true,
             loop: true,
+            watchOverflow: true,
             lazy: {
                 loadPrevNext: true,
-                loadPrevNextAmount: 3,
+                loadPrevNextAmount: 8,
             },
             navigation: {
                 nextEl: '.portfolio__btnr',

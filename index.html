@@ -49,6 +49,23 @@
     <link rel="stylesheet" href="fonts/comfortaa.css">
     <link rel="stylesheet" href="fonts/roboto.css">   
     <style>
+
+        .img-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        .bg-wrap {
+            position: relative;
+            z-index: 2;
+        }
+
+
         @media (min-width: 767px) {
 
             .swiper-cont a,
@@ -19678,8 +19695,8 @@
         .header {
             background-color: #4d5562;
             margin-bottom: 85px;
-            background: url(../images/header-bg.jpg) no-repeat;
-            background-size: cover;
+            /* background: url(../images/header-bg.jpg) no-repeat;
+            background-size: cover; */
             position: relative;
             overflow: hidden;
             z-index: 999
@@ -19825,14 +19842,15 @@
             left: 0;
             width: 50%;
             height: 100%;
-            background: #3a404a;
-            mix-blend-mode: multiply;
+            background: #161E2D;
+            /* mix-blend-mode: multiply; */
             border: 1px solid #000;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
             -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
             -ms-transform: matrix(-1, 0, 0, 1, 0, 0);
-            transform: matrix(-1, 0, 0, 1, 0, 0)
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            opacity: 0.8;
         }
 
         .header__container {
@@ -19844,7 +19862,7 @@
             color: #fff;
             font-size: 53px;
             text-transform: uppercase;
-            margin: 0 -250px 35px 0
+            margin: 0 -270px 35px 0
         }
 
         span.add-file__filename {
@@ -20183,11 +20201,11 @@
         }
 
         .portfolio__btnr {
-            background-image: url("../images/arrow-right.svg")
+            background-image: url("images/arrow-right.svg")
         }
 
         .portfolio__btnl {
-            background-image: url("../images/arrow-left.svg")
+            background-image: url("images/arrow-left.svg")
         }
 
         .portfolio__btn span {
@@ -20597,14 +20615,14 @@
             margin-bottom: 125px
         }
 
-        .reviews:after {
-            content: '';
+        .reviews .after {
+            /* content: ''; */
             position: absolute;
             height: 100%;
             top: 0;
             left: 0;
             width: 50%;
-            background: url(../images/reviews-bg.jpg) center no-repeat;
+            /* background: url(../images/reviews-bg.jpg) center no-repeat; */
             background-size: cover;
             z-index: -1
         }
@@ -20629,7 +20647,7 @@
 
         .reviews__text:after {
             content: '';
-            background: url(../images/reviews-icon.png) no-repeat;
+            background: url(images/reviews-icon.png) no-repeat;
             background-size: contain;
             position: absolute;
             bottom: 15px;
@@ -20695,7 +20713,7 @@
             -webkit-transition: .5s;
             transition: .5s;
             margin-right: 20px;
-            background: url(../images/arrow-left.svg) no-repeat center;
+            background: url(images/arrow-left.svg) no-repeat center;
             width: 43px;
             height: 22px
         }
@@ -20703,19 +20721,19 @@
         .reviews .owl-nav .owl-next {
             -webkit-transition: .5s;
             transition: .5s;
-            background: url(../images/arrow-right.svg) no-repeat center;
+            background: url(images/arrow-right.svg) no-repeat center;
             width: 43px;
             height: 22px
         }
 
         .reviews .owl-nav .owl-prev:hover,
         .portfolio__btnl:hover {
-            background: url(../images/arrow-left-pink.svg) no-repeat center
+            background: url(images/arrow-left-pink.svg) no-repeat center
         }
 
         .reviews .owl-nav .owl-next:hover,
         .portfolio__btnr:hover {
-            background: url(../images/arrow-right-pink.svg) no-repeat center
+            background: url(images/arrow-right-pink.svg) no-repeat center
         }
 
         .reviews .owl-nav .disabled {
@@ -20807,14 +20825,14 @@
             background-color: #3a414d
         }
 
-        .footer:after {
+        .footer .after {
             content: '';
             position: absolute;
             top: 0;
             right: 0;
             width: 60%;
-            background: url(../images/footer-bg.jpg) center no-repeat;
-            background-size: cover;
+            /* background: url(../images/footer-bg.jpg) center no-repeat;
+            background-size: cover; */
             height: 100%;
             z-index: -1;
             opacity: .1
@@ -21303,7 +21321,7 @@
         @media(min-width:576px) {
             #head-form .modal-body .footer__form .footer__btn:after {
                 content: '';
-                background-image: url(../images/arrowfooterform.svg);
+                background-image: url(images/arrowfooterform.svg);
                 background-position: 99px;
                 width: 99px;
                 height: 8px;
@@ -21474,7 +21492,7 @@
 
             .modal-body .footer__form .footer__btn:after {
                 content: '';
-                background-image: url(../images/arrowfooterform.svg);
+                background-image: url(images/arrowfooterform.svg);
                 background-position: 99px;
                 width: 99px;
                 height: 8px;
@@ -21611,13 +21629,13 @@
                 content: '';
                 right: 22px;
                 z-index: 999999 !important;
-                background: url(../images/reviews-icon.png) no-repeat;
+                background: url(images/reviews-icon.png) no-repeat;
                 background-size: contain;
                 position: absolute;
                 top: 32px
             }
 
-            .reviews::after {
+            .reviews .after {
                 width: 78%;
                 height: 210px;
                 top: 113px;
@@ -22002,7 +22020,7 @@
                 margin-bottom: 85px
             }
 
-            .reviews:after {
+            .reviews .after {
                 display: none
             }
 
@@ -22014,7 +22032,7 @@
                 content: '';
                 position: absolute;
                 left: -15px;
-                background: url(../images/reviews-bg.jpg) center no-repeat;
+                background: url(images/reviews-bg.jpg) center no-repeat;
                 background-size: cover
             }
 
@@ -22037,7 +22055,7 @@
 
             .footer {
                 padding: 38px 15px 12px;
-                background: url(../images/footerbackmobile.png) top no-repeat;
+                background: url(images/footerbackmobile.png) top no-repeat;
                 background-size: contain
             }
 
@@ -22087,7 +22105,7 @@
 
             .footer__form .footer__btn:after {
                 content: '';
-                background-image: url(../images/arrowfooterform.svg);
+                background-image: url(images/arrowfooterform.svg);
                 width: 121px;
                 height: 8px;
                 display: block;
@@ -22127,7 +22145,11 @@
 
 <body>
     <!--header-->
-    <header class="header wow fadeIn">
+    <header class="header wow fadeIn bg-wrap">
+        <picture>
+            <source srcset="images/@2x/webp/header-bg.webp" type="image/webp">
+            <img class="img-bg" loading="lazy" src="images/header-bg.jpg" alt="">
+        </picture>        
         <nav class="head">
             <div class="head__left">
                 <a class="head__logo" href="#"><img src="images/logo.png" alt=""></a>
@@ -23454,7 +23476,11 @@
         <div class="container">
             <div class="row">
                 <div style="z-index: 1" class="col-md-6 wow fadeInDown">
-                    <div class="advantages__item" style="background-image: url(images/advantages-block-bg.png);">
+                    <div class="advantages__item bg-wrap">
+                        <picture>
+                            <!-- <source srcset="images/@2x/webp/commend-img.webp" type="image/webp"> -->
+                            <img class="img-bg" loading="lazy" src="images/advantages-block-bg.png" alt="">
+                        </picture>
                         <h2 class="advantages__title">
                             Почему нашим клиентам незнакомы эти проблемы?
                         </h2>
@@ -23573,6 +23599,10 @@
     <!--reviews-->
     <section class="reviews" id="reviews">
         <div class="container">
+            <picture class="after">
+                <source srcset="images/@2x/webp/reviews-bg.webp" type="image/webp">
+                <img class="img-bg" loading="lazy" src="images/reviews-bg.jpg" alt="">
+            </picture>
             <p class="reviews__subtitle about-you__subtitle wow fadeInLeft">Посмотрите,</p>
             <h2 class="reviews__title about-you__title wow fadeInLeft">что говорят наши партнеры</h2>
             <div class="reviews__slider owl-carousel owl-theme wow fadeInRight">
@@ -23786,6 +23816,10 @@
     <!--footer-->
     <footer class="footer wow fadeIn" id="contact">
         <div class="container">
+            <picture class="after">
+                <source srcset="images/@2x/webp/footer-bg.webp" type="image/webp">
+                <img class="img-bg" loading="lazy" src="images/footer-bg.jpg" alt="">
+            </picture>
             <div class="row">
                 <div class="col-md-6 order-sm-first order-last">
                     <h2 class="d-none d-sm-block footer__title wow fadeInDown">Остались вопросы?</h2>
@@ -23872,7 +23906,7 @@
     <script src="js/wow.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/swiper.min.js"></script>
-    <script src="js/mixitup.min.js"></script>
+    <!-- <script src="js/mixitup.min.js"></script> -->
     <script src="js/jquery.easing-1.3.pack.js"></script>
     <script src="js/jquery.fancybox-1.3.4.pack.js"></script>
     <script src="js/main.js"></script>
