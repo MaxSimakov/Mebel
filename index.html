@@ -33,9 +33,41 @@
     <link rel="stylesheet" href="styles/font-awesome.min.css">
     <link rel="stylesheet" href="styles/jquery.fancybox-1.3.4.css">
     <link rel="stylesheet" href="styles/styles.css">-->
+    <link rel="preload" href="fonts/Roboto.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Robotoblack.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Robotoblackitalic.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Robotobold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Robotobolditalic.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Robotoitalic.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Robotolight.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Robotolightitalic.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Robotomedium.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Robotomediumitalic.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Robotothin.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Robotothinitalic.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/comfortaa.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
     <link rel="stylesheet" href="fonts/comfortaa.css">
     <link rel="stylesheet" href="fonts/roboto.css">
     <style>
+        @media (min-width: 767px) {
+
+            .swiper-cont a,
+            .swiper-cont picture {
+                display: block;
+                height: 290px;
+            }
+
+            .swiper-cont a img {
+                height: 100%;
+            }
+
+            .swiper-cont .swiper-slide {
+                width: auto !important;
+                padding: 0 5px 10px !important;
+            }
+        }
+
+
         picture {
             display: block;
         }
@@ -20116,7 +20148,7 @@
             text-align: center;
             font-size: 18px;
             background: #fff;
-            height: 300px;
+            /* height: 300px;
             display: -webkit-box;
             display: -ms-flexbox;
             display: -webkit-flex;
@@ -20128,10 +20160,10 @@
             -webkit-box-align: center;
             -ms-flex-align: center;
             -webkit-align-items: center;
-            align-items: center
+            align-items: center */
         }
 
-        .portfolio .swiper-slide img {
+        /* .portfolio .swiper-slide img {
             height: 100%;
             position: absolute;
             top: 0;
@@ -20139,7 +20171,7 @@
             padding: 0 10px 10px;
             -o-object-fit: cover;
             object-fit: cover
-        }
+        } */
 
         .portfolio__btn {
             text-align: center;
@@ -22143,9 +22175,9 @@
                     <p class="header__subtitle">&mdash;&nbsp;Работаем по&nbsp;центральной России.</p>
                 </div>
                 <picture class="header__col col-md-6 wow slideInRight">
-                    <source srcset="images/@2x/webp/header-img.webp" type="image/webp" media="(min-width:576px)">
+                    <source srcset="images/@2x/webp/header-img.webp" type="image/webp" media="(min-width:450px)">
                     <source srcset="images/@1x/webp/header-img.webp" type="image/webp">
-                    <source srcset="images/@2x/header-img.png" type="image/png" media="(min-width:576px)">
+                    <source srcset="images/@2x/header-img.png" type="image/png" media="(min-width:450px)">
                     <source srcset="images/@1x/header-img.png" type="image/png">
                     <img class="header__img" src="images/@2x/header-img.png" alt="">
                 </picture>
@@ -22290,50 +22322,85 @@
                         <div class="swiper-slide">
                             <a data-fancybox="kitchen_images_portfolio" href="images/portfolio/kitchen/1.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/kitchen/thumbnail/1.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/kitchen/thumbnail/@2x/webp/1.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/kitchen/thumbnail/@2x/1.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="kitchen_images_portfolio" href="images/portfolio/kitchen/2.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/kitchen/thumbnail/2.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/kitchen/thumbnail/@2x/webp/2.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/kitchen/thumbnail/@2x/2.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="kitchen_images_portfolio" href="images/portfolio/kitchen/3.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/kitchen/thumbnail/3.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/kitchen/thumbnail/@2x/webp/3.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/kitchen/thumbnail/@2x/3.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="kitchen_images_portfolio" href="images/portfolio/kitchen/6.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/kitchen/thumbnail/6.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/kitchen/thumbnail/@2x/webp/6.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/kitchen/thumbnail/@2x/6.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="kitchen_images_portfolio" href="images/portfolio/kitchen/5.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/kitchen/thumbnail/5.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/kitchen/thumbnail/@2x/webp/5.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/kitchen/thumbnail/@2x/5.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="kitchen_images_portfolio" href="images/portfolio/kitchen/7.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/kitchen/thumbnail/7.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/kitchen/thumbnail/@2x/webp/7.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/kitchen/thumbnail/@2x/7.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="kitchen_images_portfolio" href="images/portfolio/kitchen/8.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/kitchen/thumbnail/8.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/kitchen/thumbnail/@2x/webp/8.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/kitchen/thumbnail/@2x/8.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                     </div>
@@ -22343,50 +22410,85 @@
                         <div class="swiper-slide">
                             <a data-fancybox="kitchen_images_portfolio" href="images/portfolio/kitchen/10.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/kitchen/thumbnail/10.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/kitchen/thumbnail/@2x/webp/10.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/kitchen/thumbnail/@2x/10.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="kitchen_images_portfolio" href="images/portfolio/kitchen/11.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/kitchen/thumbnail/11.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/kitchen/thumbnail/@2x/webp/11.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/kitchen/thumbnail/@2x/11.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="kitchen_images_portfolio" href="images/portfolio/kitchen/12.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/kitchen/thumbnail/12.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/kitchen/thumbnail/@2x/webp/12.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/kitchen/thumbnail/@2x/12.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="kitchen_images_portfolio" href="images/portfolio/kitchen/13.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/kitchen/thumbnail/13.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/kitchen/thumbnail/@2x/webp/13.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/kitchen/thumbnail/@2x/13.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="kitchen_images_portfolio" href="images/portfolio/kitchen/17.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/kitchen/thumbnail/17.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/kitchen/thumbnail/@2x/webp/17.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/kitchen/thumbnail/@2x/17.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="kitchen_images_portfolio" href="images/portfolio/kitchen/15.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/kitchen/thumbnail/15.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/kitchen/thumbnail/@2x/webp/15.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/kitchen/thumbnail/@2x/15.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="kitchen_images_portfolio" href="images/portfolio/kitchen/16.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/kitchen/thumbnail/16.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/kitchen/thumbnail/@2x/webp/16.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/kitchen/thumbnail/@2x/16.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                     </div>
@@ -22401,43 +22503,73 @@
                         <div class="swiper-slide">
                             <a data-fancybox="interior_images_portfolio" href="images/portfolio/interior/in1.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/interior/thumbnail/in1.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/interior/thumbnail/@2x/webp/in1.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/interior/thumbnail/@2x/in1.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="interior_images_portfolio" href="images/portfolio/interior/in3.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/interior/thumbnail/in3.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/interior/thumbnail/@2x/webp/in3.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/interior/thumbnail/@2x/in3.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="interior_images_portfolio" href="images/portfolio/interior/in4.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/interior/thumbnail/in4.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/interior/thumbnail/@2x/webp/in4.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/interior/thumbnail/@2x/in4.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="interior_images_portfolio" href="images/portfolio/interior/in5.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/interior/thumbnail/in5.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/interior/thumbnail/@2x/webp/in5.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/interior/thumbnail/@2x/in5.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="interior_images_portfolio" href="images/portfolio/interior/in6.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/interior/thumbnail/in6.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/interior/thumbnail/@2x/webp/in6.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/interior/thumbnail/@2x/in6.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="interior_images_portfolio" href="images/portfolio/interior/in7.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/interior/thumbnail/in7.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/interior/thumbnail/@2x/webp/in7.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/interior/thumbnail/@2x/in7.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                     </div>
@@ -22448,64 +22580,109 @@
                         <div class="swiper-slide">
                             <a data-fancybox="interior_images_portfolio" href="images/portfolio/interior/in10.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/interior/thumbnail/in10.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/interior/thumbnail/@2x/webp/in10.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/interior/thumbnail/@2x/in10.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="interior_images_portfolio" href="images/portfolio/interior/in11.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/interior/thumbnail/in11.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/interior/thumbnail/@2x/webp/in11.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/interior/thumbnail/@2x/in11.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="interior_images_portfolio" href="images/portfolio/interior/in12.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/interior/thumbnail/in12.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/interior/thumbnail/@2x/webp/in12.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/interior/thumbnail/@2x/in12.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="interior_images_portfolio" href="images/portfolio/interior/in13.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/interior/thumbnail/in13.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/interior/thumbnail/@2x/webp/in13.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/interior/thumbnail/@2x/in13.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="interior_images_portfolio" href="images/portfolio/interior/in14.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/interior/thumbnail/in14.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/interior/thumbnail/@2x/webp/in14.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/interior/thumbnail/@2x/in14.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="interior_images_portfolio" href="images/portfolio/interior/in15.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/interior/thumbnail/in15.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/interior/thumbnail/@2x/webp/in15.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/interior/thumbnail/@2x/in15.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="interior_images_portfolio" href="images/portfolio/interior/in16.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/interior/thumbnail/in16.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/interior/thumbnail/@2x/webp/in16.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/interior/thumbnail/@2x/in16.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="interior_images_portfolio" href="images/portfolio/interior/in17.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/interior/thumbnail/in17.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/interior/thumbnail/@2x/webp/in17.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/interior/thumbnail/@2x/in17.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="interior_images_portfolio" href="images/portfolio/interior/in18.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/interior/thumbnail/in18.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/interior/thumbnail/@2x/webp/in18.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/interior/thumbnail/@2x/in18.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                     </div>
@@ -22518,36 +22695,61 @@
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/1.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/1.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/1.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/1.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/2.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/2.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/2.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/2.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/3.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/3.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/3.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/3.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/4.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/4.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/4.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/4.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/5.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/5.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/5.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/5.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
@@ -22560,43 +22762,73 @@
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/7.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/7.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/7.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/7.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/18.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/18.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/18.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/18.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/8.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/8.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/8.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/8.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/17.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/17.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/17.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/17.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/9.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/9.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/9.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/9.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/19.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/19.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/19.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/19.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                     </div>
@@ -22606,85 +22838,145 @@
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/10.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/10.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/10.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/10.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/11.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/11.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/11.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/11.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/14.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/14.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/14.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/14.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/12.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/12.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/12.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/12.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/13.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/13.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/13.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/13.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/15.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/15.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/15.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/15.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/16.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/16.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/16.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/16.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/20.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/20.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/20.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/20.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/21.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/21.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/21.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/21.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/22.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/22.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/22.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/22.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/23.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/23.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/23.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/23.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="furniture_images_portfolio" href="images/portfolio/furniture/24.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/furniture/thumbnail/24.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/furniture/thumbnail/@2x/webp/24.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/furniture/thumbnail/@2x/24.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                     </div>
@@ -22696,22 +22988,37 @@
                         <div class="swiper-slide">
                             <a data-fancybox="doors_images_portfolio" href="images/portfolio/doors/door1.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/doors/thumbnail/door1.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/doors/thumbnail/@2x/webp/door1.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/doors/thumbnail/@2x/door1.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="doors_images_portfolio" href="images/portfolio/doors/door2.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/doors/thumbnail/door2.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/doors/thumbnail/@2x/webp/door2.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/doors/thumbnail/@2x/door2.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="doors_images_portfolio" href="images/portfolio/doors/door3.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/doors/thumbnail/door3.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/doors/thumbnail/@2x/webp/door3.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/doors/thumbnail/@2x/door3.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                     </div>
@@ -22721,31 +23028,36 @@
                         <div class="swiper-slide">
                             <a data-fancybox="doors_images_portfolio" href="images/portfolio/doors/door4.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/doors/thumbnail/door4.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/doors/thumbnail/@2x/webp/door4.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/doors/thumbnail/@2x/door4.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="doors_images_portfolio" href="images/portfolio/doors/door5.jpg"
                                 title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/doors/thumbnail/door5.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a data-fancybox="doors_images_portfolio" href="images/portfolio/doors/door6.jpg"
-                                title="Lorem ipsum dolor sit amet">
-                                <img class="lazy-portfolio" src="images/loadgif.gif"
-                                    data-src="images/portfolio/doors/thumbnail/door6.jpg" alt="">
+                                <picture>
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/doors/thumbnail/@2x/webp/door5.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/doors/thumbnail/@2x/door5.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a data-fancybox="doors_images_portfolio" href="images/portfolio/doors/door6.jpg"
                                 title="Lorem ipsum dolor sit amet">
                                 <picture>
-                                    <source class="swiper-lazy" srcset="#" data-srcset="" type="image/webp">
-                                    <img class="lazy-portfolio" src="images/loadgif.gif"
-                                        data-src="images/portfolio/doors/thumbnail/door6.jpg" alt="">
+                                    <source class="swiper-lazy"
+                                        data-srcset="images/portfolio/doors/thumbnail/@2x/webp/door6.webp"
+                                        type="image/webp">
+                                    <img class="swiper-lazy" src="images/loadgif.gif"
+                                        data-src="images/portfolio/doors/thumbnail/@2x/door6.jpg" alt="">
                                 </picture>
                             </a>
                         </div>
@@ -23079,9 +23391,9 @@
                     <div class="row">
                         <picture class="commend__img-wrapper">
                             <source srcset="images/@2x/webp/commend-img.webp" type="image/webp"
-                                media="(min-width:576px)">
+                                media="(min-width:340px)">
                             <source srcset="images/@1x/webp/commend-img.webp" type="image/webp">
-                            <source srcset="images/@2x/commend-img.png" type="image/png" media="(min-width:576px)">
+                            <source srcset="images/@2x/commend-img.png" type="image/png" media="(min-width:340px)">
                             <source srcset="images/@1x/commend-img.png" type="image/png">
                             <img class="lazy commend__img" src="images/loadgif.gif"
                                 data-src="images/@2x/commend-img.png" alt="">
@@ -23189,11 +23501,8 @@
                 </div>
                 <div class="production__video">
                     <picture>
-                        <source srcset="images/@2x/webp/production-img4.webp" type="image/webp"
-                            media="(min-width:576px)">
-                        <source srcset="images/@1x/webp/production-img4.webp" type="image/webp">
-                        <source srcset="images/@2x/production-img4.jpg" type="image/jpg" media="(min-width:576px)">
-                        <source srcset="images/@1x/production-img4.jpg" type="image/jpg">
+                        <source srcset="images/@2x/webp/production-img4.webp" type="image/webp">
+                        <source srcset="images/@2x/production-img4.jpg" type="image/jpg">
                         <img class="lazy" src="images/loadgif.gif" data-src="images/@2x/production-img4.jpg" alt="">
                     </picture>
                     <!-- <img class="lazy" src="images/loadgif.gif" data-src="images/production-img4.jpg" alt=""> -->
@@ -23225,10 +23534,8 @@
                 </a> -->
                 </div>
                 <picture class="production__img-block">
-                    <source srcset="images/@2x/webp/production-img1.webp" type="image/webp" media="(min-width:576px)">
-                    <source srcset="images/@1x/webp/production-img1.webp" type="image/webp">
-                    <source srcset="images/@2x/production-img1.png" type="image/png" media="(min-width:576px)">
-                    <source srcset="images/@1x/production-img1.png" type="image/png">
+                    <source srcset="images/@2x/webp/production-img1.webp" type="image/webp">
+                    <source srcset="images/@2x/production-img1.png" type="image/png">
                     <img class="lazy" src="images/loadgif.gif" data-src="images/@2x/production-img1.png" alt="">
                 </picture>
                 <!-- <div class="production__img-block">
@@ -23237,10 +23544,8 @@
             </div>
             <div class="production__col wow slideInRight">
                 <picture class="production__imageb1">
-                    <source srcset="images/@2x/webp/production-img2.webp" type="image/webp" media="(min-width:576px)">
-                    <source srcset="images/@1x/webp/production-img2.webp" type="image/webp">
-                    <source srcset="images/@2x/production-img2.png" type="image/png" media="(min-width:576px)">
-                    <source srcset="images/@1x/production-img2.png" type="image/png">
+                    <source srcset="images/@2x/webp/production-img2.webp" type="image/webp">
+                    <source srcset="images/@2x/production-img2.png" type="image/png">
                     <img class="lazy" src="images/loadgif.gif" data-src="images/@2x/production-img2.png" alt="">
                 </picture>
 
@@ -23248,10 +23553,8 @@
                     <img class="lazy" src="images/loadgif.gif" data-src="images/production-img2.png" alt="">
                 </div> -->
                 <picture class="production__imageb2">
-                    <source srcset="images/@2x/webp/production-img3.webp" type="image/webp" media="(min-width:576px)">
-                    <source srcset="images/@1x/webp/production-img3.webp" type="image/webp">
-                    <source srcset="images/@2x/production-img3.png" type="image/png" media="(min-width:576px)">
-                    <source srcset="images/@1x/production-img3.png" type="image/png">
+                    <source srcset="images/@2x/webp/production-img3.webp" type="image/webp">
+                    <source srcset="images/@2x/production-img3.png" type="image/png">
                     <img class="lazy" src="images/loadgif.gif" data-src="images/@2x/production-img3.png" alt="">
                 </picture>
                 <!-- <div class="production__imageb2">
@@ -23288,12 +23591,8 @@
                     </div>
                     <div class="reviews__info">
                         <picture>
-                            <source srcset="images/reviews_avatars/@2x/webp/6qqoLj_PeQY.webp" type="image/webp"
-                                media="(min-width:576px)">
-                            <source srcset="images/reviews_avatars/@1x/webp/6qqoLj_PeQY.webp" type="image/webp">
-                            <source srcset="images/reviews_avatars/@2x/6qqoLj_PeQY.jpg" type="image/jpg"
-                                media="(min-width:576px)">
-                            <source srcset="images/reviews_avatars/@1x/6qqoLj_PeQY.jpg" type="image/jpg">
+                            <source srcset="images/reviews_avatars/@2x/webp/6qqoLj_PeQY.webp" type="image/webp">
+                            <source srcset="images/reviews_avatars/@2x/6qqoLj_PeQY.jpg" type="image/jpg">
                             <img class="lazy" src="images/loadgif.gif"
                                 data-src="images/reviews_avatars/@2x/6qqoLj_PeQY.jpg" alt="Мария Софронова"
                                 title="Отзыв от Марии Софроновой">
@@ -23319,12 +23618,8 @@
                     </div>
                     <div class="reviews__info">
                         <picture>
-                            <source srcset="images/reviews_avatars/@2x/webp/ava4.webp" type="image/webp"
-                                media="(min-width:576px)">
-                            <source srcset="images/reviews_avatars/@1x/webp/ava4.webp" type="image/webp">
-                            <source srcset="images/reviews_avatars/@2x/ava4.jpg" type="image/jpg"
-                                media="(min-width:576px)">
-                            <source srcset="images/reviews_avatars/@1x/ava4.jpg" type="image/jpg">
+                            <source srcset="images/reviews_avatars/@2x/webp/ava4.webp" type="image/webp">
+                            <source srcset="images/reviews_avatars/@2x/ava4.jpg" type="image/jpg">
                             <img class="lazy" src="images/loadgif.gif" data-src="images/reviews_avatars/@2x/ava4.jpg"
                                 alt="Андрей Смирнов" title="Отзыв от Андрея Смирнова">
                         </picture>
@@ -23350,12 +23645,8 @@
                     </div>
                     <div class="reviews__info">
                         <picture>
-                            <source srcset="images/reviews_avatars/@2x/webp/ava2.webp" type="image/webp"
-                                media="(min-width:576px)">
-                            <source srcset="images/reviews_avatars/@1x/webp/ava2.webp" type="image/webp">
-                            <source srcset="images/reviews_avatars/@2x/ava2.png" type="image/png"
-                                media="(min-width:576px)">
-                            <source srcset="images/reviews_avatars/@1x/ava2.png" type="image/png">
+                            <source srcset="images/reviews_avatars/@2x/webp/ava2.webp" type="image/webp">
+                            <source srcset="images/reviews_avatars/@2x/ava2.png" type="image/png">
                             <img class="lazy" src="images/loadgif.gif" data-src="images/reviews_avatars/@2x/ava2.png"
                                 alt="Anna Kryazhova" title="Отзыв от Anna Kryazhova">
                         </picture>
@@ -23380,12 +23671,8 @@
                     </div>
                     <div class="reviews__info">
                         <picture>
-                            <source srcset="images/reviews_avatars/@2x/webp/ava5.webp" type="image/webp"
-                                media="(min-width:576px)">
-                            <source srcset="images/reviews_avatars/@1x/webp/ava5.webp" type="image/webp">
-                            <source srcset="images/reviews_avatars/@2x/ava5.jpg" type="image/jpg"
-                                media="(min-width:576px)">
-                            <source srcset="images/reviews_avatars/@1x/ava5.jpg" type="image/jpg">
+                            <source srcset="images/reviews_avatars/@2x/webp/ava5.webp" type="image/webp">
+                            <source srcset="images/reviews_avatars/@2x/ava5.jpg" type="image/jpg">
                             <img class="lazy" src="images/loadgif.gif" data-src="images/reviews_avatars/@2x/ava5.jpg"
                                 alt="Сергей Смирнов" title="Отзыв от Сергея Смирнова">
                         </picture>
@@ -23409,12 +23696,8 @@
                     </div>
                     <div class="reviews__info">
                         <picture>
-                            <source srcset="images/reviews_avatars/@2x/webp/ava3.webp" type="image/webp"
-                                media="(min-width:576px)">
-                            <source srcset="images/reviews_avatars/@1x/webp/ava3.webp" type="image/webp">
-                            <source srcset="images/reviews_avatars/@2x/ava3.png" type="image/png"
-                                media="(min-width:576px)">
-                            <source srcset="images/reviews_avatars/@1x/ava3.png" type="image/png">
+                            <source srcset="images/reviews_avatars/@2x/webp/ava3.webp" type="image/webp">
+                            <source srcset="images/reviews_avatars/@2x/ava3.png" type="image/png">
                             <img class="lazy" src="images/loadgif.gif" data-src="images/reviews_avatars/@2x/ava3.png"
                                 alt="Юлия Захарова" title="Отзыв от Юлии Захаровой">
                         </picture>
