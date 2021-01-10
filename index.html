@@ -19703,7 +19703,7 @@
             margin-bottom: 85px;
             /* background: url(../images/header-bg.jpg) no-repeat;
             background-size: cover; */
-            position: relative;
+            /* position: relative;
             overflow: hidden;
             z-index: 999
         }
@@ -19849,7 +19849,7 @@
             width: 50%;
             height: 100%;
             background: #161E2D;
-            /* mix-blend-mode: multiply; */
+            mix-blend-mode: multiply; 
             border: 1px solid #000;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -20184,7 +20184,7 @@
             -webkit-box-align: center;
             -ms-flex-align: center;
             -webkit-align-items: center;
-            align-items: center */
+            align-items: center
         }
 
         /* .portfolio .swiper-slide img {
@@ -20197,7 +20197,7 @@
             object-fit: cover
         } */
 
-        .portfolio__btn {
+        /* .portfolio__btn {
             text-align: center;
             margin-bottom: 25px;
             margin-left: 20px;
@@ -20622,13 +20622,11 @@
         }
 
         .reviews .after {
-            /* content: ''; */
             position: absolute;
             height: 100%;
             top: 0;
             left: 0;
             width: 50%;
-            /* background: url(../images/reviews-bg.jpg) center no-repeat; */
             background-size: cover;
             z-index: -1
         }
@@ -20837,8 +20835,6 @@
             top: 0;
             right: 0;
             width: 60%;
-            /* background: url(../images/footer-bg.jpg) center no-repeat;
-            background-size: cover; */
             height: 100%;
             z-index: -1;
             opacity: .1
@@ -21620,10 +21616,6 @@
                 position: relative
             }
 
-            .reviews__slider {
-                /*touch-action:none*/
-            }
-
             .reviews__text:after {
                 display: none
             }
@@ -22145,7 +22137,7 @@
             .header__img {
                 margin: 0 auto -125px;
             }
-        } */
+        }  */
     </style>
 </head>
 
@@ -22153,8 +22145,11 @@
     <!--header-->
     <header class="header wow fadeIn bg-wrap">
         <picture>
-            <source srcset="images/@2x/webp/header-bg.webp" type="image/webp">
-            <img class="img-bg" loading="lazy" src="images/header-bg.jpg" alt="">
+            <source srcset="images/@2x/webp/header-bg.webp" type="image/webp" media="(min-width:576px)">
+            <source srcset="images/@1x/webp/header-bg.webp" type="image/webp">
+            <source srcset="images/@2x/header-bg.jpg" type="image/jpg" media="(min-width:576px)">
+            <source srcset="images/@1x/header-bg.jpg" type="image/jpg">
+            <img class="img-bg" loading="lazy" src="images/@2x/header-bg.jpg" alt="">
         </picture>        
         <nav class="head">
             <div class="head__left">
