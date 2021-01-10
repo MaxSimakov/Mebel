@@ -7,6 +7,7 @@ $('.reviews__slider').owlCarousel({
     navText: ["&nbsp;", "&nbsp;"],
     nav: true,
     responsiveClass: true,
+    lazyLoad: true,
     responsive: {
         576: {
             autoHeight: false
