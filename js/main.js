@@ -34,6 +34,13 @@ jQuery('.lazy-portfolio').each(function () {
     jQuery(this).attr('src', imageSrc).removeAttr('data-src');
 })
 
+jQuery('.footer__map').each(function () {
+    setTimeout(() => {
+        var imageSrc = jQuery(this).attr('data-src');
+    jQuery(this).attr('src', imageSrc).removeAttr('data-src');
+    }, 3000);
+})
+
 $(window).load(function () {
 
     if ($(window).width() > 767) {
