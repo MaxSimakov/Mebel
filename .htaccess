@@ -52,7 +52,7 @@ RewriteEngine on
 
 
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
-RewriteRule ^index\.html$ https://mebel-pod-kluch.palazo.ru/ [R=301,L]
+RewriteRule ^index\.html$ https://mebel-pod-kluch.palazo.ru/test [R=301,L]
 
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
